@@ -2,28 +2,28 @@
 class Skillctrl < Formula
   desc "Manage agent skills while preserving locally recorded intent"
   homepage "https://github.com/wwwyo/skillctrl"
-  version "0.3.0"
+  version "0.3.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/wwwyo/skillctrl/releases/download/v0.3.0/skillctrl_0.3.0_darwin_arm64.tar.gz"
-      sha256 "7fd7b00d6f32d6a6d908ee5107978495b752a0fc9779c33fa38b38962426d5b5"
+      url "https://github.com/wwwyo/skillctrl/releases/download/v0.3.1/skillctrl_0.3.1_darwin_arm64.tar.gz"
+      sha256 "88bd311b547807462d2eb1a8c5fbd1fb0943e7923d74ea1af910a9df192d080e"
     end
     on_intel do
-      url "https://github.com/wwwyo/skillctrl/releases/download/v0.3.0/skillctrl_0.3.0_darwin_amd64.tar.gz"
-      sha256 "c25ac45099abdf81c572d0706645099bf1bdafc8c6ebd0d9ab8d671aadb12306"
+      url "https://github.com/wwwyo/skillctrl/releases/download/v0.3.1/skillctrl_0.3.1_darwin_amd64.tar.gz"
+      sha256 "a3b93be3d85e8ad7584f2c73679cec0447e0107436dcc90094ba276754388ac5"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/wwwyo/skillctrl/releases/download/v0.3.0/skillctrl_0.3.0_linux_arm64.tar.gz"
-      sha256 "db8244228431a5565ff1f706ba2decd0a4ed98980aca98c5239c5ed82f52b817"
+      url "https://github.com/wwwyo/skillctrl/releases/download/v0.3.1/skillctrl_0.3.1_linux_arm64.tar.gz"
+      sha256 "691e8538de538e9e3f35a488fa77a7fa7956d68bce443da6075315fa6a967da9"
     end
     on_intel do
-      url "https://github.com/wwwyo/skillctrl/releases/download/v0.3.0/skillctrl_0.3.0_linux_amd64.tar.gz"
-      sha256 "1f936be4095f59a90722d27c852e09e88598d68d11410f2dcdea426531223048"
+      url "https://github.com/wwwyo/skillctrl/releases/download/v0.3.1/skillctrl_0.3.1_linux_amd64.tar.gz"
+      sha256 "a27a2a67db4e3a1f2e3ff8c2b2674d3ce674dba84cf2f73c409ae2d4ac9165c5"
     end
   end
 
