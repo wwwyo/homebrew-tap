@@ -45,21 +45,8 @@ pf_set address-reviews.enabled 'true'
 pf_set fix-ci.own-prs 'true'
 pf_set fix-ci.reviewed-prs 'false'
 
-"${PF[@]}" config set hooks.setup --repo "$REPO" --yes --file - <<'PULLFROG_HOOK_SETUP'
-# mise toolchain: install mise if absent, install repo tools, expose shims on PATH
-# NB: set -e is intentionally AFTER the file guard — `ls` exits non-zero when
-# only some of the files exist, and pipefail would turn that into a false negative.
-ls mise.toml .mise.toml .config/mise.toml 2>/dev/null | grep -q . || exit 0
-set -euo pipefail
-command -v mise >/dev/null 2>&1 || curl -fsSL https://mise.run | sh
-export PATH="$HOME/.local/bin:$PATH"
-mise trust -a 2>/dev/null || true
-mise install -y
-mkdir -p "$HOME/.local/bin"
-ln -sf "$HOME"/.local/share/mise/shims/* "$HOME"/.local/bin/ 2>/dev/null || true
-PULLFROG_HOOK_SETUP
-
 # explicit unsets — keep the backend converged on this file
+pf_unset hooks.setup
 pf_unset instructions
 pf_unset env-allowlist
 pf_unset hooks.post-checkout
