@@ -20,7 +20,7 @@ homebrew-tap/
 
 したがってこの repo で行う正当な変更は次に限られる:
 
-- README.md / AGENTS.md の更新
+- README.md / AGENTS.md と repo の開発・レビュー設定の更新
 - ツール側で生成器を直したうえでの、release 経由の formula 更新
 
 ## 新しいツールを追加する
@@ -49,3 +49,7 @@ brew tap wwwyo/tap
 brew install wwwyo/tap/<formula>
 brew test <formula>
 ```
+
+## Pullfrog
+
+設定の正本は [`.github/pullfrog.config.sh`](.github/pullfrog.config.sh)。初回レビューと追加コミットの再レビューは自動で行う。手動レビューも `@pullfrog` で依頼できる。
