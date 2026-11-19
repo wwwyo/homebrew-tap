@@ -52,4 +52,4 @@ brew test <formula>
 
 ## Pullfrog
 
-設定の正本は [`.github/pullfrog.config.sh`](.github/pullfrog.config.sh)。初回レビューと追加コミットの再レビューは自動で行う。手動レビューも `@pullfrog` で依頼できる。
+設定の正本は [`.github/pullfrog.config.sh`](.github/pullfrog.config.sh)。初回レビューは自動、追加コミットの再レビューは無効。追加レビューは必要時に `@pullfrog` で依頼する。
